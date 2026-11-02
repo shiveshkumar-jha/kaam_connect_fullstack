@@ -156,99 +156,6 @@ KaamConnect/
 └── README.md
 ```
 
----
-
-## ⚙️ Installation & Setup
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/KaamConnect.git
-```
-
-```bash
-cd KaamConnect
-```
-
-### 2. Backend Setup
-
-Navigate to the backend directory:
-
-```bash
-cd backend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Create a `.env` file in the backend root directory:
-
-```env
-PORT=8000
-
-MONGODB_URL=your_mongodb_connection_string
-
-CORS_ORIGIN=http://localhost:5173
-
-JWT_SECRET=your_jwt_secret
-
-JWT_EXPIRES_IN=7d
-
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-```
-
-Start the backend server:
-
-```bash
-npm run dev
-```
-
-The backend will run at:
-
-```text
-http://localhost:8000
-```
-
-### 3. Frontend Setup
-
-Open another terminal and navigate to the frontend directory:
-
-```bash
-cd frontend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Create a `.env` file in the frontend root directory:
-
-```env
-VITE_API_URL=http://localhost:8000/api/v1
-```
-
-Start the frontend:
-
-```bash
-npm run dev
-```
-
-The frontend will be available at:
-
-```text
-http://localhost:5173
-```
-
----
 
 ## 🔗 API Overview
 
@@ -262,14 +169,6 @@ The backend exposes RESTful APIs for authentication, workers, employers, jobs, a
 | Jobs | Create, View, Update, Delete Jobs |
 | Applications | Apply for Jobs, View Applications |
 | Recruitment | Manage Application Status and Candidates |
-
-**Base API URL:**
-
-```text
-/api/v1
-```
-
-*Note: Refer to the backend route files for the exact implemented endpoints and HTTP methods.*
 
 ---
 
@@ -308,27 +207,6 @@ MongoDB references are used to establish relationships between users, profiles, 
 4. Publish job opportunities.
 5. Discover and review candidates.
 6. Manage applications and update hiring statuses.
-
----
-
-## 🔒 Environment Variables & Security
-
-- Never commit `.env` files to GitHub.
-- Use strong JWT secrets.
-- Hash passwords before storing them.
-- Validate incoming API requests.
-- Protect sensitive routes using authentication middleware.
-- Implement role-based access control.
-- Keep Cloudinary credentials private.
-
-Add the following to `.gitignore`:
-
-```gitignore
-node_modules/
-.env
-dist/
-.DS_Store
-```
 
 ---
 
